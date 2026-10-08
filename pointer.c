@@ -5,19 +5,20 @@
 int main()
 {
      
-    int *ptr = malloc(sizeof(int));
+    int *ptr = calloc(5,sizeof(int));
 
     if(ptr == NULL)
     {
         return 1;
     }
 
-    *ptr = 100;
-
-    printf("value: %d\n", *ptr);
+    for(int i=0; i < 5; i++)
+    {
+        printf("%d", ptr[i]);
+    }
 
     free(ptr);
-    ptr = NULL;
+     
 
     return 0;
 }
