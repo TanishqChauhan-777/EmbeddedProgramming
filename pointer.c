@@ -1,17 +1,12 @@
-#include <stdio.h>
-
- 
- 
+ #include <stdio.h>
 
 int main()
 {
+    int reg = 0;
 
-   int a = 40;
-  
+    reg = reg | (1 << 2);
 
-   int result = a >> 2;
+    printf("Register: %d\n", reg);
 
-   printf("Result: %d", result);
-     
-    return 0; 
+    return 0;
 }
