@@ -2,9 +2,9 @@
 
 int main()
 {
-    int reg = 0;
+    int reg = 12;
 
-    reg = reg | (1 << 2);
+    reg  &= ~(1 << 2);
 
     printf("Register: %d\n", reg);
 
