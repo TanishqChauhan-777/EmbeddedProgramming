@@ -1,12 +1,23 @@
  #include <stdio.h>
+ #include <stdlib.h>
+
 
 int main()
 {
-    int reg = 12;
+     
+    int *ptr = malloc(sizeof(int));
 
-    reg  ^= (1 << 2);
+    if(ptr == NULL)
+    {
+        return 1;
+    }
 
-    printf("Register: %d\n", reg);
+    *ptr = 100;
+
+    printf("value: %d\n", *ptr);
+
+    free(ptr);
+    ptr = NULL;
 
     return 0;
 }
