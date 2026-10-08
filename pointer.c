@@ -4,7 +4,7 @@ int main()
 {
     int reg = 12;
 
-    reg  &= ~(1 << 2);
+    reg  ^= (1 << 2);
 
     printf("Register: %d\n", reg);
 
