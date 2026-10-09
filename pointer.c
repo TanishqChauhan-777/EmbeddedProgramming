@@ -1,39 +1,21 @@
- #include <stdio.h>
- #include <stdlib.h>
-
+ 
+#include <stdio.h>
 
 int main()
 {
-     
-     int *ptr = malloc(5 * sizeof(int));
+    char name;
+    int age;
+    float id;
+    double marks;
 
-     if (ptr == NULL)
-     {
-        return 1;
-     }
+    printf("Size of char: %zu bytes\n", sizeof(name));
+    printf("Size of int: %zu bytes\n", sizeof(age));
+    printf("Size of float: %zu bytes\n", sizeof(id));
+    printf("Size of double: %zu bytes\n", sizeof(marks));
 
-    for(int i=0; i < 5; i++)
-    {
-        ptr[i] = (i + 1) * 10;
-    }
+    int nums[5];
 
-    int *temp = realloc(ptr, 10 * sizeof(int));
-
-    if (temp == NULL)
-    {
-        free(ptr);
-        return 1;
-    }
-
-    ptr = temp;
-
-    for(int i = 0; i < 5; i++)
-    {
-        printf("%d\n", ptr[i]);
-    }
-
-    free(ptr);
-
+    printf("Size of nums array: %zu bytes\n", sizeof(nums));
 
     return 0;
 }
